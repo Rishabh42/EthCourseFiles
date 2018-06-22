@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +13,9 @@
     "solc": "^0.4.24",
     "web3": "^1.0.0-beta.26"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "electron-rebuild": "^1.7.3"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rishabh42/EthCourseFiles.git"
