@@ -19,6 +19,17 @@ beforeEach(async () =>{
 
 describe('Inbox', () => {
   it('deploys a contract', () => {
-    console.log(inbox);
+    assert.ok(Inbox.options.address);
+});
+    it('default message', async () => {
+      const message = await inbox.methods.message().call();
+      assert.equal(message, 'Hi there!');
+
+    it('can change the message', async()  => {
+      await Inbox.methods.setMessage('bye').send({fro: accounts[0]});
+      const message = await inbox.methods.message().call();
+      assert.equal(message,'bye');
+
+    });
   });
 });
